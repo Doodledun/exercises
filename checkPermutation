@@ -1,0 +1,15 @@
+import java.util.*;
+
+class Solution {
+    public int solution(int[] A) {
+        int max = A.length;
+        HashSet hs = new HashSet();
+        for (int i =0; i < max; i++){
+            hs.add(A[i]);
+            if(A[i] > max)
+               return 0;
+        }    
+        if(hs.size() == A.length) return 1;
+        else return 0;
+    }
+}
