@@ -1,0 +1,16 @@
+class Solution {
+    public int solution(int[] A) {
+        int count = 0;
+        int zero = 0;
+        int len = A.length;
+        for ( int i = 0; i < A.length; i++ ){
+            if(A[i] == 0){
+                count = count - zero;
+                count += len - (i+1);
+                zero += 1;
+            }
+        }
+        if(count >1000000000 || count<0) return -1;
+        else return count;
+    }
+}
