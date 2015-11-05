@@ -1,0 +1,12 @@
+class Solution{
+int solution(int A, int B, int K) {
+    int a = B/ K;
+    int b;
+    if(A == 0){
+        a +=1;
+        b=0;
+    }
+    else b = (A-1) /K;
+    return a-b;
+}
+}
